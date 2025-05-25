@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>BookMarker</title>
+  <link rel="shortcut icon" href="img/bookmark.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container mt-4 p-5 d-flex justify-content-center align-items-center flex-column">
+
+    <h1 class="fw-500 pb-2 position-relative">Bookmarker</h1>
+    <div class="inner-bookmark w-100  pt-4 my-5">
+      <h2 class="fw-500 mb-4 text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+          class="fa-solid fa-bookmark"></i></h2>
+      <label for="siteName" class="fw-600 mb-2"><i class="fa-solid fa-book-bookmark me-2"></i>Site Name</label>
+      <input type="text" class="form-control selectedInput" placeholder="Bookmark Name" id="siteName">
+      <div id="siteNameError" class="error-message text-danger"></div>
+      <label for="siteUrl" class="fw-600 mb-2 mt-4"><i class="fa-solid fa-link"></i>Site URL</label>
+      <input type="url" class="form-control selectedInput" placeholder="Website URL" id="siteUrl">
+      <div id="siteUrlError" class="error-message text-danger"></div>
+      <div class="text-center my-4">
+        <input type="submit" value="Submit" id="addBtn" class="btn px-5">
+      </div>
+      <div class="text-center my-4">
+        <input type="button" value="Update Bookmark" id="updateBtn" class="btn px-5 d-none">
+      </div>
+    </div>
+
+    <!-----------Table----------->
+    <table class="bg-light w-100 text-center">
+      <thead class="">
+        <th>Index</th>
+        <th>Website Name</th>
+        <th>Update</th>
+        <th>Visit</th>
+        <th>Delete</th>
+      </thead>
+      <tbody id="bookmark-content">
+        <!-- <tr>
+          <td>index</td>
+          <td class="text-capitalize">webname</td>
+          <td><button class="btn btn-primary m-1 p-2"><i class="fa fa-edit pe-2"></i>Update</button></td>
+          <td><a class="btn btn-visit m-1 p-2"><i class="fa-solid fa-eye pe-2"></i>Visit</a></td>
+          <td><button class="btn btn-delete m-1 p-2"><i class="fa-solid fa-trash-can pe-2"></i>Delete</button></td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+  <!----------- Alert ----------->
+  <div id="fixedBox" class="d-none justify-content-center align-items-center p-4 rounded-2 shadow-lg vh-100">
+    <div class="alertMsg bg-light rounded-2 p-4">
+      <div class="d-flex justify-content-between align-items-baseline">
+        <ul class="circles d-flex list-unstyled">
+          <li class="rounded-circle"></li>
+          <li class="rounded-circle"></li>
+          <li class="rounded-circle"></li>
+        </ul>
+        <div class="close-icon">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <h4 class="py-3 fw-400">
+        Site Name or Url is Not Valid, Please Follow The Rules Below :
+      </h4>
+      <p class="mb-0 fw-400">
+        <i class="fa-regular fa-circle-right p-2"></i>
+        Site Name Must Contain at Least 3 Characters!
+      </p>
+      <p class="mb-0 fw-400 pt-2">
+        <i class="fa-regular fa-circle-right p-2"></i>
+        Site URL Must Be a Valid One!
+      </p>
+      <p class="mb-0 fw-400 pt-2">
+        <i class="fa-regular fa-circle-right p-2"></i>
+        You Can't Add the Same Url or the Same Name!
+      </p>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

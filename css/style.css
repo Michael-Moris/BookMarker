@@ -1,0 +1,183 @@
+*::selection {
+    background-color: #FEC260;
+}
+
+body {
+    background-color: #F7ECDE;
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 3.125rem;
+    color: #352e28;
+    line-height: 3.75rem;
+}
+
+h1::before {
+    content: '';
+    margin: auto;
+    position: absolute;
+    height: 1.2rem;
+    width: 100%;
+    bottom: .7rem;
+    background-color: #FEC260;
+    z-index: -1;
+    letter-spacing: .125rem;
+    transition: height 0.4s;
+}
+
+h1:hover::before {
+    height: 2.3rem;
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+    background-image: linear-gradient(to right, rgba(62, 165, 92, 1), rgba(178, 171, 73, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.inner-bookmark {
+    border-width: .1875rem 0;
+    border-style: dotted;
+    border-color: #352E28;
+}
+
+.inner-bookmark label {
+    color: #212529;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 .25rem #FADFB4;
+}
+
+input[type='submit'].btn,
+input.btn {
+    padding: 6px 48px;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border: #d1512d;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+    --bs-btn-hover-color: #fff;
+}
+
+
+thead,
+tr {
+    border-bottom: .125rem solid#DEE2E6;
+}
+
+th {
+    padding: .5rem .5rem;
+}
+
+td {
+    padding: 1rem 0;
+}
+
+.btn.btn-visit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+
+.btn.btn-delete {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #eb1d36;
+    --bs-btn-border-color: #eb1d36;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d30820;
+    --bs-btn-hover-border-color: #ba081d;
+}
+
+.error-message {
+    font-size: 0.9em;
+    margin-top: .3125rem;
+}
+
+#fixedBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.alertMsg {
+    width: 33rem;
+}
+
+.close-icon {
+    font-weight: 900;
+    font-size: 1.5625rem;
+    color: #212529;
+
+}
+
+.circles li {
+    margin-left: .3125rem;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.circles li:nth-child(1) {
+    background-color: #f15f5d;
+}
+
+.circles li:nth-child(2) {
+    background-color: #febe2e;
+}
+
+.circles li:nth-child(3) {
+    background-color: #4db748;
+}
+
+h4 {
+    font-family: "Bree Serif", serif;
+    font-size: 1.3125rem;
+    line-height: 1.6875rem;
+    color: #352e28;
+}
+
+p {
+    color: #212529;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+}
+
+p i {
+    color: #bb4120;
+
+}
+
+.fa-xmark {
+    cursor: pointer;
+}
